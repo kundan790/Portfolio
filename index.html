@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .iAm{
-            color: red;
+        :root{
+            --a : black;
+            --aa :rgb(255, 255, 255);
+        }
+        .DarkMode{
+            --a : rgb(255, 255, 255);
+            --aa :rgb(0, 0, 0); 
+        }
+        body{
+            background-color: var(--a);
+            color: var(--aa);
+          
         }
     </style>
 </head>
-<body>
-    <div class="iAm">Hello Bro</div>
+<body id="aaa" class="DarkMode">
+    <div class="iAm" id="a">Hello Bro</div>
+    <script>
+        document.getElementById("a").addEventListener("click", function (){
+            var a = document.getElementById("aaa")
+          
+            a.classList.toggle("DarkMode");
+            console.log("Hello")
+
+        })
+    </script>
 </body>
 </html>
